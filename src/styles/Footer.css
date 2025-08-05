@@ -1,0 +1,27 @@
+.footer-container {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f5f5f7;
+  color: #515154;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #e1306c;
+  font-weight: bold;
+}
+
+.instagram-link:hover {
+  text-decoration: underline;
+}
+
+.instagram-icon {
+  width: 24px;
+  height: 24px;
+}

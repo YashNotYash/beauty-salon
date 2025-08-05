@@ -9,11 +9,11 @@ function Contact() {
         We'd love to hear from you! Please reach out with any questions or to book an appointment.
       </p>
       <div className="contact-info">
-        <div><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></div>
-        <div><strong>Email:</strong> <a href="mailto:info@maabeautycare.com">info@maabeautycare.com</a></div>
-        <div><strong>Address:</strong> 123 Beauty Lane, Glamour City, Country</div>
+        <div><strong>Phone:</strong> <a href="tel:+4106849964">+1 410 684 9964</a></div>
+        <div><strong>Email:</strong> <a href="mailto:palakprajapati12345678@gmail.com">palakprajapati12345678@gmail.com</a></div>
+        <div><strong>Address:</strong> 103 N CHARTER RD APT B, GLEN BURNIE, MARYLAND, USA</div>
       </div>
-      <button className="contact-button" onClick={() => window.location.href = 'mailto:info@maabeautycare.com'}>
+      <button className="contact-button" onClick={() => window.location.href = 'mailto:palakprajapati12345678@gmail.com'}>
         Email Us
       </button>
     </div>
