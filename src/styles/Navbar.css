@@ -4,7 +4,6 @@
   align-items: center;
   background: rgba(245, 245, 247, 0.85);
   padding: 1rem 2rem;
-  border-radius: 0 0 16px 16px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(200,200,200,0.3);
@@ -36,8 +35,8 @@
 
 .navbar-link:hover,
 .navbar-link.active {
-  color: #0071e3; /* Apple blue */
-  border-bottom: 2px solid #0071e3;
+  color: #580f5f; /* Apple blue */
+  border-bottom: 2px solid #74147c;
   background: rgba(0,113,227,0.06);
   border-radius: 4px;
 }

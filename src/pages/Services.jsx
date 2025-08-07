@@ -8,6 +8,8 @@ import hairStylingImg from '../assets/hairStylingImg.jpg';
 import hairColorImg from '../assets/hairColorImg.jpg';
 import hennaImg from '../assets/hennaImg.jpg';
 import clothesTailoringImg from '../assets/clothesTailoringImg.jpg';
+import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 const services = [
   {
@@ -57,7 +59,7 @@ function Services() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <div className="services-container">
+    <div className="services-container" style={{position: 'relative'}}>
       <h2 className="services-title">Our Services</h2>
       <div className="services-grid">
         {services.map((service) => (
@@ -72,19 +74,22 @@ function Services() {
         ))}
       </div>
 
-      {selected && (
-        <div className="service-modal-overlay" onClick={() => setSelected(null)}>
-          <div className="service-modal" onClick={e => e.stopPropagation()}>
-            <button className="service-modal-close" onClick={() => setSelected(null)}>×</button>
-            <h3>{selected.name}</h3>
-            <ul>
-              {selected.items.map(item => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
+      {selected &&
+        ReactDOM.createPortal(
+          <div className="service-modal-overlay" onClick={() => setSelected(null)}>
+            <div className="service-modal" onClick={e => e.stopPropagation()}>
+              <button className="service-modal-close" onClick={() => setSelected(null)}>×</button>
+              <h3>{selected.name}</h3>
+              <ul>
+                {selected.items.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>,
+          document.body
+        )
+      }
     </div>
   );
 }
