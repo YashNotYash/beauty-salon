@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import './styles/Navbar.css';
 import './styles/Footer.css';
+import './styles/App.css';
 
 function App() {
 
