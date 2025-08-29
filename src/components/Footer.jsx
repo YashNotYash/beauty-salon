@@ -5,7 +5,6 @@ import instagramIcon from '../assets/instagram.png';
 function Footer() {
   return (
     <footer className="footer-container">
-      <p>&copy; 2025 Maa Beauty Care. All Rights Reserved.</p>
       <a
         href="https://www.instagram.com/maa_beauty_care0109"
         target="_blank"
@@ -19,6 +18,8 @@ function Footer() {
         />
         Follow us on Instagram!
       </a>
+      <p>&copy; {new Date().getFullYear()} Maa Beauty Care. All rights reserved.</p>
+      <p className="developer-tag">Developed by <a href="https://www.instagram.com/yashn0tyash/" target="_blank" rel="noopener noreferrer">Yashkumar Prajapati</a></p>
     </footer>
   );
 }
