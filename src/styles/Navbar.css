@@ -40,3 +40,14 @@
   background: rgba(0,113,227,0.06);
   border-radius: 4px;
 }
+
+@media (max-width: 600px) {
+  .navbar-link {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-links {
+    gap: 0.5rem;
+  }
+}

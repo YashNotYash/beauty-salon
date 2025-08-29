@@ -71,15 +71,16 @@
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   max-width: 100%;
-  width: 97%;
-  
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .gallery-image {
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
   display: block;
@@ -97,6 +98,8 @@
 
 @media (max-width: 600px) {
   .gallery-grid {
-    gap: 2px;
+    gap: 16px;
+    grid-template-columns: 1fr;
   }
+  
 }
