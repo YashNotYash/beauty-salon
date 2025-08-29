@@ -17,7 +17,7 @@ function Footer() {
           alt="Instagram"
           className="instagram-icon"
         />
-        Follow us on Instagram
+        Follow us on Instagram!
       </a>
     </footer>
   );

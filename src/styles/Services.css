@@ -106,16 +106,17 @@
   width: 400px;
   max-height: 90vh;
   overflow-y: auto;
-  border-radius: 18px;
-  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 22px;
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
   position: relative;
-  animation: fadeIn 0.2s ease-out;
+  animation: fadeIn 0.3s cubic-bezier(.4,0,.2,1);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 8px 32px rgb(3, 0, 5), 0 1.5px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 40px 0 rgba(80, 0, 120, 0.18), 0 2px 12px rgba(0,0,0,0.10);
   border: 1.5px solid rgba(180, 120, 255, 0.18);
+  backdrop-filter: blur(2px);
 }
 
 @keyframes fadeIn {
@@ -125,13 +126,22 @@
 
 .service-modal h3 {
   margin-top: 0;
-  color: #3a0a4b;
-  border-bottom: 3px solid #e9d8fd;
-  font-size: 2.1rem;
+  color: #450b5f;
+  font-size: 2.2rem;
   font-family: 'Segoe UI Semibold', 'Segoe UI', Arial, sans-serif;
   letter-spacing: 0.5px;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.service-modal h3::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a78bfa 0%, #8c44ad 100%);
 }
 
 .service-modal ul {
@@ -139,28 +149,37 @@
   padding: 0;
   margin: 0 0 1.5rem 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .service-modal li {
-  padding: 0.5rem 0;
-  
+  background: rgba(124, 58, 237, 0.07);
+  border-radius: 12px;
+  padding: 0.7rem 1.2rem;
   color: #450b5f;
   font-size: 1.08rem;
   font-family: 'Segoe UI', Arial, sans-serif;
-  margin-bottom: 0;
+  box-shadow: 0 1px 4px rgba(124,58,237,0.04);
+  transition: background 0.2s;
+}
+
+.service-modal li:hover {
+  background: rgba(124, 58, 237, 0.15);
 }
 
 .service-modal-close {
   position: absolute;
-  top: 0.7rem;
-  right: 1rem;
+  top: 1rem;
+  right: 1.2rem;
   background: linear-gradient(135deg, #ede9fe 60%, #c4b5fd 100%);
   border: none;
   border-radius: 50%;
   font-size: 2rem;
   color: #3d044b;
   cursor: pointer;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
   width: 2.3rem;
   height: 2.3rem;
   display: flex;
@@ -172,6 +191,7 @@
 .service-modal-close:hover {
   color: #fff;
   background: linear-gradient(135deg, #76267a 60%, #7c3aed 100%);
+  box-shadow: 0 4px 16px rgba(124,58,237,0.15);
 }
 
 @media (max-width: 600px) {
